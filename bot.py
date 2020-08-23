@@ -71,7 +71,7 @@ async def _talk(ctx, * , question):
     await ctx.send(random.choice(responses))
     
 @client.command(aliases=['tacticchess','puzzle'])
-async def _talk(ctx, * , question):
+async def _puzzle(ctx, * , question):
     responses = ['https://github.com/ZeroThink-01/X-Gama/blob/master/jpg/chesstactic2.JPG?raw=true',
                 'https://github.com/ZeroThink-01/X-Gama/blob/master/jpg/chesstactic3.JPG?raw=true',
                 'https://github.com/ZeroThink-01/X-Gama/blob/master/jpg/chesstactic4.JPG?raw=true',
