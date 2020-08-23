@@ -72,13 +72,13 @@ async def _talk(ctx, * , question):
     
 @client.command(aliases=['tacticchess','puzzle'])
 async def _puzzle(ctx, * , question):
-    responses = ['https://github.com/ZeroThink-01/X-Gama/blob/master/jpg/chesstactic2.JPG?raw=true',
-                'https://github.com/ZeroThink-01/X-Gama/blob/master/jpg/chesstactic3.JPG?raw=true',
-                'https://github.com/ZeroThink-01/X-Gama/blob/master/jpg/chesstactic4.JPG?raw=true',
-                'https://github.com/ZeroThink-01/X-Gama/blob/master/jpg/chesstactic5.JPG?raw=true',
-                'https://github.com/ZeroThink-01/X-Gama/blob/master/jpg/mate%20in%2017.JPG?raw=true',
-                'https://github.com/ZeroThink-01/X-Gama/blob/master/jpg/matein3.JPG?raw=true',
-                'https://github.com/ZeroThink-01/X-Gama/blob/master/jpg/taktik1.JPG?raw=true',
+    responses = ['https://github.com/ZeroThink-01/X-Gamav1.7/blob/master/jpg/chesstactic2.JPG?raw=true',
+                'https://github.com/ZeroThink-01/X-Gamav1.7/blob/master/jpg/chesstactic3.JPG?raw=true',
+                'https://github.com/ZeroThink-01/X-Gamav1.7/blob/master/jpg/chesstactic4.JPG?raw=true',
+                'https://github.com/ZeroThink-01/X-Gamav1.7/blob/master/jpg/chesstactic5.JPG?raw=true',
+                'https://github.com/ZeroThink-01/X-Gamav1.7/blob/master/jpg/mate%20in%2017.JPG?raw=true',
+                'https://github.com/ZeroThink-01/X-Gamav1.7/blob/master/jpg/matein3.JPG?raw=true',
+                'https://github.com/ZeroThink-01/X-Gamav1.7/blob/master/jpg/taktik1.JPG?raw=true',
                 'puzzle not founded.']
 
     await ctx.send(random.choice(responses))
