@@ -1,4 +1,4 @@
-![logo](https://raw.githubusercontent.com/ZeroThink-01/X-Gama/master/Xgama.png)
+![logo](https://github.com/ZeroThink-01/X-Gamav1.7/blob/master/Xgama.png?raw=true)
 # X-Gama
 This is a discord bot that chatting with people , its in BETA now
 Created by masterXpro7#2678
