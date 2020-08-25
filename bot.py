@@ -2,7 +2,7 @@ import discord
 from discord.ext import commands
 import random
 
-token = ''
+token = 'XXXXXXXXXXXXXXXXXX'
 
 client = commands.Bot(command_prefix = 'X')
 
