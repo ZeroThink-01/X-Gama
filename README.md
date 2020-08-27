@@ -1,7 +1,7 @@
 ![logo](https://github.com/ZeroThink-01/X-Gamav1.7/blob/master/Xgama.png?raw=true)
 # X-Gama
-This is a discord bot that chatting with people , its in BETA now
-Created by masterXpro7#2678
+This is a discord bot that chatting with people , its in BETA now .
+Created by masterXpro7#2678 .
 
 # Inviting!
 
