@@ -6,4 +6,4 @@ Created by masterXpro7#2678 .
 # Inviting!
 
 Its in BETA version now if you wanna invite you can visit this website:
-https://sites.google.com/view/x-gama/ana-sayfa?authuser=0
+ - https://sites.google.com/view/x-gama/main-page?authuser=0
