@@ -59,14 +59,6 @@ async def author(ctx):
 @client.command()
 async def howareyou(ctx):
     await ctx.send('im fine thanks, you?')
-        
-@client.command()
-async def bird(ctx):
-    responses = ['https://st3.depositphotos.com/23057334/34866/v/450/depositphotos_348664714-stock-illustration-swallow-flight-isolated-white-background.jpg',
-                'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQzxaixGcue_nINriYyf-ln53iTcioe3cV19Q&usqp=CAU',
-                'https://st.depositphotos.com/1052928/4396/i/450/depositphotos_43963763-stock-photo-blue-budgie.jpg']
-    
-    await ctx.send(random.choice(responses))
     
 @client.command(aliases=['talk','tell'])
 async def _talk(ctx, * , question):
