@@ -10,7 +10,7 @@ client = commands.Bot(command_prefix = 'X')
 
 @client.event
 async def on_ready():
-    print('Hello!')
+    print('X-Gama discord-bot is ready!')
     print(Started)
 
 async def on_message(self, message):
@@ -19,10 +19,10 @@ async def on_message(self, message):
         return
 
     if message.content == 'version':
-        await message.channel.send('BetaV1')
+        await message.channel.send(':gear: BetaV1')
 
     if message.content == 'hi':
-        await message.channel.send('hi!')    
+        await message.channel.send(':100: hi!')    
         
     if message.content == 'author':
         await message.channel.send('masterXpro7#2678')  
@@ -31,14 +31,14 @@ async def on_message(self, message):
         await message.channel.send('im fine thanks, you?')
 
     if message.content == 'rpshelp':
-        await message.channel.send('Xrps_(Your Choice) Example: Xrps_rock')
+        await message.channel.send(':gear: Xrps_(Your Choice) Example: Xrps_rock')
 
     if message.content == 'invite':
         await message.channel.send('You can also invite me! ( https://sites.google.com/view/x-gama/main-page ) , Github Code: https://github.com/ZeroThink-01/X-Gama')  
 
 @client.command()
 async def rpshelp(ctx):
-    await ctx.send('Xrps_(Your Choice) Example: Xrps_rock')
+    await ctx.send(':gear: Xrps_(Your Choice) Example: Xrps_rock')
     
 @client.command()
 async def invite(ctx):
@@ -46,11 +46,11 @@ async def invite(ctx):
 
 @client.command()
 async def version(ctx):
-    await ctx.send('BetaV1')
+    await ctx.send(':gear: BetaV1')
 
 @client.command()
 async def hi(ctx):
-    await ctx.send('hi!')
+    await ctx.send(':100: hi!')
     
 @client.command()
 async def author(ctx):
