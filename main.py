@@ -107,6 +107,7 @@ class eventandrun:
     @client.event
     async def on_command_error(ctx, error):
         if isinstance(error, CommandNotFound):
+            print('Command Error')
             return
         raise error
     
