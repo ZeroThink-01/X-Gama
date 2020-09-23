@@ -15,8 +15,7 @@ token = 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
     #commands
     
 class NormalCommands:
-
-    
+  
     @client.command()
     async def rpshelp(ctx):
         await ctx.send(':gear: Xrps_(Your Choice) Example: Xrps_rock')
