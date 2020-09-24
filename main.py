@@ -8,14 +8,14 @@ Started = 'Bot is working!'
 
 client = commands.Bot(command_prefix = 'X')
     
-token = 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
+token = '-'
 
 ################################################################################################
 
     #commands
     
 class NormalCommands:
-  
+    
     @client.command()
     async def rpshelp(ctx):
         await ctx.send(':gear: Xrps_(Your Choice) Example: Xrps_rock')
@@ -108,11 +108,13 @@ class eventandrun:
     async def on_command_error(ctx, error):
         if isinstance(error, CommandNotFound):
             print('Command Error')
-            return
+        await ctx.send('Command Not Found , may be try `Xhelp` ?')
+        return
         raise error
-    
+
     @client.event
     async def on_ready():
+        print(f'Discord.py version: {discord.__version__}')
         print('X-Gama discord-bot is ready!')
         print(Started)
 
