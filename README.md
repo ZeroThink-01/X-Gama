@@ -10,4 +10,4 @@ Its in BETA version now if you wanna invite you can visit this website:
  
  # To run!
  
- `python main.py`
+ `python main.py` or `python3 main.py`
