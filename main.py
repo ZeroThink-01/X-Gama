@@ -117,9 +117,9 @@ class eventandrun:
         print(f'Discord.py version: {discord.__version__}')
         print('X-Gama discord-bot is ready!')
         print(Started)
-     
-    @client.event
+    
     async def on_message(self, message):
+        # don't respond to ourselves
         if message.author == self.user:
             return
             
