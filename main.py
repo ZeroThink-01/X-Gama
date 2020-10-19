@@ -7,6 +7,7 @@ from discord.ext.commands import CommandNotFound
 Started = 'Bot is working!'
 
 client = commands.Bot(command_prefix = 'X')
+client.remove_command('help')
     
 token = '-'
 
@@ -15,6 +16,10 @@ token = '-'
     #commands
     
 class NormalCommands:
+
+    @client.command()
+    async def issue(ctx):
+        await ctx.send(':gear: Send Private Message to me! :gear:')
     
     @client.command()
     async def rpshelp(ctx):
@@ -98,6 +103,42 @@ class RandomCommands:
                     'Your Choice: Paper , My Choice: Paper , Draw!']
     
         await ctx.send(random.choice(responses))
+        
+    @client.command()
+    async def emoji(ctx):
+        responses = [':100:',
+                    ':thumbsup:',
+                    ':laughing:',
+                    ':smiling_imp:']
+    
+        await ctx.send(random.choice(responses))
+        
+    @client.command()
+    async def help(ctx):
+        await ctx.send('''```Commands :
+  Category Chess:
+  Xpuzzle     {sending chess puzzles}
+
+  Category Talk:
+  Xtalk (your message)       {sending random messages to your questions!}
+  Xauthor            {sending author's id}
+  Xhi                    { say "hello" to bot! }
+  Xhowareyou     { say "how are you?" to bot! }
+  Xinvite          { invite link , also some little websites to invite! }
+  Xversion         {The version of bot}
+  Xissue        (issues/feedbacks)
+
+ Category Help:
+  Xhelp                {..... ( For more info and commands type 'Xhelp' ) .....}
+
+ Category Games:
+  Xrps_(chosen power) (example : Xrps_rock ; can use: rock, scissors, paper) { Play RockScissorsPaper }
+  Xrpshelp       {Howto play RockScissorsPaper game?}
+  Xemoji            { Sends Random Emojies from Server! }    
+
+
+SEND DM (PRIVATE MESSAGES) MESSAGES TO BOT FOR SUBMITTING YOUR ISSUE/FEEDBACK!
+```''')
 
 ###############################################################################
 
@@ -122,8 +163,20 @@ class eventandrun:
         # don't respond to ourselves
         if message.author == self.user:
             return
+       
+    @client.event
+    async def on_message(message):
+        if isinstance(message.channel, discord.channel.DMChannel) and message.author != client.user: 
+            responses = ['Marked as a issue!',
+                        'Hello!',
+                        'Can you repeat it again?',
+                        'Thank You For your feedback!']
+            await message.channel.send(random.choice(responses))
+            print(message)
             
-####################################################
+        await client.process_commands(message)
+           
+###############################################################################
 
     # run!
 
