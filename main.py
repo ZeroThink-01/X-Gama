@@ -3,11 +3,16 @@ from discord.ext import commands
 import random
 import Xgamaversion
 from discord.ext.commands import CommandNotFound
+import statcord 
 
 Started = 'Bot is working!'
 
 client = commands.Bot(command_prefix = 'X')
 client.remove_command('help')
+
+key = "-"
+api = statcord.Client(client,key)
+api.start_loop()
     
 token = '-'
 
@@ -18,8 +23,12 @@ token = '-'
 class NormalCommands:
 
     @client.command()
+    async def ping(ctx):
+        await ctx.send(f"Pong! :ping_pong: ```Latency: {client.latency} second.```")
+
+    @client.command()
     async def issue(ctx):
-        await ctx.send(':gear: Send Private Message to me! :gear:')
+        await ctx.send(':gear: Send Private Message to me! (```<<< BETA```),(```Recommended >>>```) Or Open Issue In Github! :gear:')
     
     @client.command()
     async def rpshelp(ctx):
@@ -127,6 +136,7 @@ class RandomCommands:
   Xinvite          { invite link , also some little websites to invite! }
   Xversion         {The version of bot}
   Xissue        (issues/feedbacks)
+  Xping          {Ping-Pong : Latency}
 
  Category Help:
   Xhelp                {..... ( For more info and commands type 'Xhelp' ) .....}
@@ -146,6 +156,10 @@ class eventandrun:
 
     # events
     @client.event
+    async def on_command(ctx):
+        api.command_run(ctx)
+        
+    @client.event
     async def on_command_error(ctx, error):
         if isinstance(error, CommandNotFound):
             print('Command Error')
@@ -158,6 +172,7 @@ class eventandrun:
         print(f'Discord.py version: {discord.__version__}')
         print('X-Gama discord-bot is ready!')
         print(Started)
+        await client.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name=" In 7 Servers! | Xhelp , Xissue |"))
     
     async def on_message(self, message):
         # don't respond to ourselves
