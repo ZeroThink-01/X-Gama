@@ -15,3 +15,8 @@ Its in BETA version now if you wanna invite you can visit this website:
  # Support Server!
  
  - https://discord.gg/9nqSejU
+ 
+ # More!
+
+- https://bots.discordlabs.org/bot/743132258537439313
+- Look to app: https://discordbots.app/
