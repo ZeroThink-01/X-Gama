@@ -11,3 +11,7 @@ Its in BETA version now if you wanna invite you can visit this website:
  # To run!
  
  `python main.py` or `python3 main.py`
+ 
+ # Support Server!
+ 
+ - https://discord.gg/9nqSejU
