@@ -24,7 +24,11 @@ class NormalCommands:
 
     @client.command()
     async def ping(ctx):
-        await ctx.send(f"Pong! :ping_pong: ```Latency: {client.latency} second.```")
+        await ctx.send(f'Pong! :ping_pong: ```Latency: {client.latency} second.```')
+        
+    @client.command()
+    async def D(ctx):
+        await ctx.send('XD')
 
     @client.command()
     async def issue(ctx):
@@ -33,15 +37,16 @@ class NormalCommands:
     @client.command()
     async def rpshelp(ctx):
         await ctx.send(':gear: Xrps_(Your Choice) Example: Xrps_rock')
+        await ctx.send(':warning: Find a Secret Command Of RPS game!')
     
     @client.command()
     async def invite(ctx):
-        await ctx.send('You can also invite me! ( https://sites.google.com/view/x-gama/main-page ) , Github Code: https://github.com/ZeroThink-01/X-Gama')
+        await ctx.send('You can also invite me! ( https://xgama.herokuapp.com/ ) , Github Code: https://github.com/ZeroThink-01/X-Gama')
 
     @client.command()
     async def version(ctx):
         await ctx.send(':gear: BetaV1')
-
+        
     @client.command()
     async def hi(ctx):
         await ctx.send(':100: hi!')
@@ -53,6 +58,10 @@ class NormalCommands:
     @client.command()
     async def howareyou(ctx):
         await ctx.send('im fine thanks, you?')
+        
+    @client.command()
+    async def puzzleadder(ctx):
+        await ctx.send('Help to add puzzles to bot? Then come to our server! (Including Puzzle Admin Role) https://discord.gg/9nqSejU ')
         
 class RandomCommands:
     
@@ -78,15 +87,29 @@ class RandomCommands:
     
     @client.command(aliases=['tacticchess','puzzle'])
     async def _puzzle(ctx):
-        responses = ['White to play. https://github.com/ZeroThink-01/X-Gamav1.7/blob/master/jpg/chesstactic2.JPG?raw=true',
-                    'Black to play. https://github.com/ZeroThink-01/X-Gamav1.7/blob/master/jpg/chesstactic3.JPG?raw=true',
-                    'White to play. https://github.com/ZeroThink-01/X-Gamav1.7/blob/master/jpg/chesstactic4.JPG?raw=true',
-                    'Black to Play. https://github.com/ZeroThink-01/X-Gamav1.7/blob/master/jpg/chesstactic5.JPG?raw=true',
-                    'Black to play. https://github.com/ZeroThink-01/X-Gamav1.7/blob/master/jpg/mate%20in%2017.JPG?raw=true',
-                    'Black to play. https://github.com/ZeroThink-01/X-Gamav1.7/blob/master/jpg/matein3.JPG?raw=true',
-                    'White to play. https://github.com/ZeroThink-01/X-Gamav1.7/blob/master/jpg/taktik1.JPG?raw=true',
+        responses = ['White to play. Author = masterXpro7#2678 https://github.com/ZeroThink-01/X-Gamav1.7/blob/master/jpg/chesstactic2.JPG?raw=true',
+                    'Black to play. Author = masterXpro7#2678 https://github.com/ZeroThink-01/X-Gamav1.7/blob/master/jpg/chesstactic3.JPG?raw=true',
+                    'White to play. Author = masterXpro7#2678 https://github.com/ZeroThink-01/X-Gamav1.7/blob/master/jpg/chesstactic4.JPG?raw=true',
+                    'Black to Play. Author = masterXpro7#2678 https://github.com/ZeroThink-01/X-Gamav1.7/blob/master/jpg/chesstactic5.JPG?raw=true',
+                    'Black to play. Author = masterXpro7#2678 https://github.com/ZeroThink-01/X-Gamav1.7/blob/master/jpg/mate%20in%2017.JPG?raw=true',
+                    'Black to play. Author = masterXpro7#2678 https://github.com/ZeroThink-01/X-Gamav1.7/blob/master/jpg/matein3.JPG?raw=true',
+                    'White to play. Author = masterXpro7#2678 https://github.com/ZeroThink-01/X-Gamav1.7/blob/master/jpg/taktik1.JPG?raw=true',
                     'puzzle not founded. Puzzle command is not working for now.']
 
+        await ctx.send(random.choice(responses))
+        
+    @client.command()
+    async def puzzle_atomic(ctx):
+        responses = ['White to play. Variant = Atomic , Author = masterXpro7#2678 https://github.com/ZeroThink-01/X-Gama/blob/master/jpg/atomicchess.JPG?raw=true',
+                    'puzzle not founded. Puzzle command is not working for now.']
+
+        await ctx.send(random.choice(responses))
+        
+    @client.command()
+    async def puzzle_racingkings(ctx):
+        responses = ['Black to play. Variant = Racingkings , Author = masterXpro7#2678 https://github.com/ZeroThink-01/X-Gama/blob/master/jpg/chessRK.JPG?raw=true',
+                    'puzzle not founded. Puzzle command is not working for now.']
+    
         await ctx.send(random.choice(responses))
     
     @client.command()
@@ -127,6 +150,9 @@ class RandomCommands:
         await ctx.send('''```Commands :
   Category Chess:
   Xpuzzle     {sending chess puzzles}
+  Xpuzzle_atomic  {sending atomic chess puzzles}
+  Xpuzzle_racingkings    {sending RacingKings chess puzzles}
+  Xpuzzleadder             (Help to add puzzles to bot? then come to our server! (including puzzle admin role) )
 
   Category Talk:
   Xtalk (your message)       {sending random messages to your questions!}
@@ -137,18 +163,48 @@ class RandomCommands:
   Xversion         {The version of bot}
   Xissue        (issues/feedbacks)
   Xping          {Ping-Pong : Latency}
+  XD             (XD)
 
  Category Help:
   Xhelp                {..... ( For more info and commands type 'Xhelp' ) .....}
 
  Category Games:
   Xrps_(chosen power) (example : Xrps_rock ; can use: rock, scissors, paper) { Play RockScissorsPaper }
+  Xrpsclue           ( Want to find secret Powers in RPS game? Then use it! )
   Xrpshelp       {Howto play RockScissorsPaper game?}
   Xemoji            { Sends Random Emojies from Server! }    
 
 
 SEND DM (PRIVATE MESSAGES) MESSAGES TO BOT FOR SUBMITTING YOUR ISSUE/FEEDBACK!
 ```''')
+
+############################################################################ SECRET!!!!
+        
+    @client.command()
+    async def rpsclue(ctx):
+        await ctx.send('''
+Clue 1 :white_check_mark: = Light , Dark.
+        
+^^ Task 1
+ =========================================
+Clue 1  :white_check_mark: = Blue
+Clue 2 :white_check_mark: = Raining
+        
+^^ Task 2
+        
+==========================================
+
+Clue 1 :white_check_mark: = Red , Orange , Yellow
+
+^^ Task 3
+
+==========================================    
+Other Tasks added in soon!
+
+        
+''')
+
+            
 
 ###############################################################################
 
@@ -163,7 +219,8 @@ class eventandrun:
     async def on_command_error(ctx, error):
         if isinstance(error, CommandNotFound):
             print('Command Error')
-        await ctx.send('Command Not Found , may be try `Xhelp` ?')
+            print(error)
+        await ctx.send(f'```{error} , may be try "Xhelp" ?```')
         return
         raise error
 
