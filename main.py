@@ -27,7 +27,7 @@ class NormalCommands:
         await ctx.send(f'Pong! :ping_pong: ```Latency: {client.latency} second.```')
         
     @client.command()
-    async def D(ctx):
+    async def xD(ctx):
         await ctx.send('XD')
 
     @client.command()
@@ -163,7 +163,7 @@ class RandomCommands:
   Xversion         {The version of bot}
   Xissue        (issues/feedbacks)
   Xping          {Ping-Pong : Latency}
-  XD             (XD)
+  XxD             (XD)
 
  Category Help:
   Xhelp                {..... ( For more info and commands type 'Xhelp' ) .....}
