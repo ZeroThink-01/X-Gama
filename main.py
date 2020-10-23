@@ -32,7 +32,7 @@ class NormalCommands:
 
     @client.command()
     async def issue(ctx):
-        await ctx.send(':gear: Send Private Message to me! (```<<< BETA```),(```Recommended >>>```) Or Open Issue In Github! :gear:')
+        await ctx.send(':gear: Send Private Message to me! ```<<< BETA``` , ```Recommended >>>``` Or Open Issue In Github! :gear:')
     
     @client.command()
     async def rpshelp(ctx):
