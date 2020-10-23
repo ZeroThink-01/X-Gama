@@ -19,3 +19,4 @@ Its in BETA version now if you wanna invite you can visit this website:
  # Lists :
 - https://bots.discordlabs.org/bot/743132258537439313
 - Look to app (and see the X-Gama for inviting) : https://discordbots.app/
+- https://voidbots.net/bot/743132258537439313
