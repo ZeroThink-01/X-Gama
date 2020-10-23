@@ -178,7 +178,36 @@ class RandomCommands:
 SEND DM (PRIVATE MESSAGES) MESSAGES TO BOT FOR SUBMITTING YOUR ISSUE/FEEDBACK!
 ```''')
 
+    @client.command()
+    async def D(ctx):
+        return
+
 ############################################################################ SECRET!!!!
+
+    @client.command()
+    async def rps_lightning(ctx):
+        await ctx.send(':white_check_mark: one task finished!')
+        responses = ['Your Choice: :cloud_lightning:  , My Choice: :x: , You won!',
+                    'Your Choice: :cloud_lightning:  , My Choice: :cloud_lightning: , Draw!']
+    
+        await ctx.send(random.choice(responses))
+    
+    
+    @client.command()
+    async def rps_water(ctx):
+        await ctx.send(':white_check_mark: one task finished!')
+        responses = ['Your Choice: :fountain:  , My Choice: :x: , You won!',
+                    'Your Choice: :fountain:  , My Choice: :fountain: , Draw!']
+    
+        await ctx.send(random.choice(responses))
+        
+    @client.command()
+    async def rps_fire(ctx):
+        await ctx.send(':white_check_mark: one task finished!')
+        responses = ['Your Choice: :fire:  , My Choice: :x: , You won!',
+                    'Your Choice: :fire:  , My Choice: :fire: , Draw!']
+    
+        await ctx.send(random.choice(responses))
         
     @client.command()
     async def rpsclue(ctx):
