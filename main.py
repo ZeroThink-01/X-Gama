@@ -229,7 +229,7 @@ class eventandrun:
         print(f'Discord.py version: {discord.__version__}')
         print('X-Gama discord-bot is ready!')
         print(Started)
-        await client.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name=" In 7 Servers! | Xhelp , Xissue |"))
+        await client.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name=" In 6 Servers! | Xhelp , Xissue |"))
     
     async def on_message(self, message):
         # don't respond to ourselves
