@@ -10,11 +10,11 @@ Started = 'Bot is working!'
 client = commands.Bot(command_prefix = 'X')
 client.remove_command('help')
 
-key = ""
+key = "-"
 api = statcord.Client(client,key)
 api.start_loop()
     
-token = ''
+token = '-'
 
 ################################################################################################
 
