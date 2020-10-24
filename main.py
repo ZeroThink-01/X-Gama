@@ -2,7 +2,7 @@ import discord
 from discord.ext import commands
 import random
 import Xgamaversion
-from discord.ext.commands import CommandNotFound
+from discord.ext.commands import CommandNotFound, has_permissions, MissingPermissions
 import statcord 
 
 Started = 'Bot is working!'
@@ -164,7 +164,13 @@ class RandomCommands:
   Xissue        (issues/feedbacks)
   Xping          {Ping-Pong : Latency}
   XxD             (XD)
-
+  
+  Category Moderation:
+  Xwarn              ( You Can Only warn if you have these PERMISSIONS:)
+                     - Manage nicknames!
+                     - Ban Members!
+                     ====================================================
+                      
  Category Help:
   Xhelp                {..... ( For more info and commands type 'Xhelp' ) .....}
 
@@ -183,7 +189,7 @@ SEND DM (PRIVATE MESSAGES) MESSAGES TO BOT FOR SUBMITTING YOUR ISSUE/FEEDBACK!
         return
 
 ############################################################################ SECRET!!!!
-
+        
     @client.command()
     async def rpsclue(ctx):
         await ctx.send('''
@@ -207,8 +213,13 @@ Other Tasks added in soon!
 
         
 ''')
+############################################################################### WARN
 
-            
+    @client.command(pass_context = True)
+    @has_permissions(manage_nicknames=True, ban_members=True)
+    async def warn(ctx, member: discord.Member, *, reason=None):
+        await ctx.send(f'User {member} Warned!')
+        await ctx.send(f'{member} Please be more careful!')
 
 ###############################################################################
 
@@ -224,7 +235,7 @@ class eventandrun:
         if isinstance(error, CommandNotFound):
             print('Command Error')
             print(error)
-        await ctx.send(f'```{error} , may be try "Xhelp" ?```')
+        await ctx.send(f'```{error} / may be try "Xhelp" / ?```')
         return
         raise error
 
@@ -252,10 +263,12 @@ class eventandrun:
             
         await client.process_commands(message)
            
+############################################################################### 
+        
 ###############################################################################
 
-    # run!
+        # run!
 
-    # Finish :)  
+        # Finish :)  
 
     client.run(token)
