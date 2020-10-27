@@ -18,6 +18,8 @@ Its in BETA version now if you wanna invite you can visit this website:
  
  # Lists :
 [![discordbotslabs](https://github.com/ZeroThink-01/X-Gama/blob/master/bots-lab-xgama.JPG?raw=true)](https://bots.discordlabs.org/bot/743132258537439313)
-[![VoidBots](https://voidbots.net/api/embed/743132258537439313/)](https://voidbots.net/bot/743132258537439313)
+<a href="https://voidbots.net/bot/743132258537439313" >
+  <img src="https://voidbots.net/api/embed/743132258537439313" width="300" alt="X-GAMA" />
+</a>
 
 - Look to app (and see the X-Gama for inviting) : https://discordbots.app/ (TODO add a image of it)
